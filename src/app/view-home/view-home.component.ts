@@ -14,23 +14,23 @@ export class ViewHomeComponent implements OnInit {
 
   public updates = [
     {
-      content: 'ログイン機能を追加しました',
+      title: 'ログイン機能を追加しました',
       date: '2018-01-01'
     },
     {
-      content: 'ユーザ検索機能を追加しました',
+      title: 'ユーザ検索機能を追加しました',
       date: '2018-02-01'
     },
     {
-      content: 'GitHub連携機能を追加しました',
+      title: 'GitHub連携機能を追加しました',
       date: '2018-03-01'
     },
     {
-      content: 'プロジェクト作成機能を追加しました',
+      title: 'プロジェクト作成機能を追加しました',
       date: '2018-04-01'
     },
     {
-      content: 'ユーザページ機能を追加しました',
+      title: 'ユーザページ機能を追加しました',
       date: '2018-05-01'
     }
   ];
