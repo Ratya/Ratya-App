@@ -1,7 +1,9 @@
 <nz-layout>
 
   <nz-sider nzCollapsible [nzCollapsed]="isCollapsed" [nzTrigger]="null">
-    <div class="logo"></div>
+    <div class="logo">
+      <img [src]="logo">
+    </div>
     <ul nz-menu [nzTheme]="nzTheme" [nzMode]="nzMode">
       <li *ngFor="let route of routes"
           nz-menu-item
