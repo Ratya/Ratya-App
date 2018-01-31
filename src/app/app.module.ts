@@ -11,10 +11,12 @@ import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ViewHomeComponent } from './view-home/view-home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ViewHomeComponent
   ],
   imports: [
     AppRoutingModule,
