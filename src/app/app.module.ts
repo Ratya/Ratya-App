@@ -19,6 +19,7 @@ import { ViewUsersDetailComponent } from './view-users-detail/view-users-detail.
 import { ViewReleasesComponent } from './view-releases/view-releases.component';
 import { ViewReleasesDetailComponent } from './view-releases-detail/view-releases-detail.component';
 import { ViewRegisterComponent } from './view-register/view-register.component';
+import { ViewUpdatesComponent } from './view-updates/view-updates.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ViewRegisterComponent } from './view-register/view-register.component';
     ViewReleasesDetailComponent,
     ViewUsersComponent,
     ViewUsersDetailComponent,
-    ViewRegisterComponent
+    ViewRegisterComponent,
+    ViewUpdatesComponent
   ],
   imports: [
     AppRoutingModule,
