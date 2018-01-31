@@ -1,3 +1,89 @@
-<p>
-  view-register works!
-</p>
+<!-- title -->
+
+<div class="title">
+  <img [src]="logoSrc">
+  <h1>Ratya</h1>
+  <p>New platform for OSS.</p>
+</div>
+
+<!-- form -->
+
+<form nz-form [formGroup]="formGroup" class="login-form" (ngSubmit)="submitForm()">
+  <div nz-form-item>
+    <div nz-form-control>
+      <nz-input
+        formControlName="email"
+        nzPlaceHolder="メールアドレス"
+        nzSize="large">
+        <ng-template #prefix>
+          <i class="anticon anticon-user"></i>
+        </ng-template>
+      </nz-input>
+      <div
+        nz-form-explain
+        *ngIf="email.dirty && email.hasError('required')">
+        メールアドレスを入力してください
+      </div>
+      <div
+        nz-form-explain
+        *ngIf="email.dirty && email.hasError('maxLength')">
+        メールアドレスが長過ぎます
+      </div>
+      <div
+        nz-form-explain
+        *ngIf="email.dirty && email.hasError('email')">
+        メールアドレスが正しくありません
+      </div>
+    </div>
+  </div>
+  <div nz-form-item>
+    <div nz-form-control>
+      <nz-input
+        formControlName="password"
+        nzType="password"
+        nzPlaceHolder="パスワード"
+        nzSize="large">
+        <ng-template #prefix>
+          <i class="anticon anticon-lock"></i>
+        </ng-template>
+      </nz-input>
+      <div
+        nz-form-explain
+        *ngIf="password.dirty && password.hasError('required')">
+        パスワードを入力してください
+      </div>
+      <div
+        nz-form-explain
+        *ngIf="password.dirty && password.hasError('maxLength')">
+        パスワードが長過ぎます
+      </div>
+    </div>
+  </div>
+  <div nz-form-item>
+    <div nz-form-control>
+      <div>
+        <label nz-checkbox formControlName="termsOfService">
+          <span>利用規約に同意する</span>
+        </label>
+      </div>
+      <div>
+        <label nz-checkbox formControlName="privacyPolicy">
+          <span>プライバシーポリシーに同意する</span>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div nz-form-item>
+    <div nz-form-control>
+      <button
+        nz-button
+        class="login-form-button"
+        nzType="primary"
+        nzSize="large">
+        新規登録
+      </button>
+      <span>または</span>
+      <a routerLink="/">ログイン</a>
+    </div>
+  </div>
+</form>

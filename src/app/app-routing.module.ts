@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ViewHomeComponent } from './view-home/view-home.component';
 import { ViewProjectsComponent } from './view-projects/view-projects.component';
 import { ViewProjectsDetailComponent } from './view-projects-detail/view-projects-detail.component';
+import { ViewRegisterComponent } from './view-register/view-register.component';
 import { ViewReleasesComponent } from './view-releases/view-releases.component';
 import { ViewReleasesDetailComponent } from './view-releases-detail/view-releases-detail.component';
 import { ViewUsersComponent } from './view-users/view-users.component';
@@ -25,6 +26,10 @@ const routes: Routes = [
   {
     path: 'releases/:id',
     component: ViewReleasesDetailComponent
+  },
+  {
+    path: 'new',
+    component: ViewRegisterComponent
   },
   {
     path: 'users',
