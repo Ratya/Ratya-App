@@ -7,6 +7,7 @@ import { ViewProjectsDetailComponent } from './view-projects-detail/view-project
 import { ViewRegisterComponent } from './view-register/view-register.component';
 import { ViewReleasesComponent } from './view-releases/view-releases.component';
 import { ViewReleasesDetailComponent } from './view-releases-detail/view-releases-detail.component';
+import { ViewUpdatesComponent } from './view-updates/view-updates.component';
 import { ViewUsersComponent } from './view-users/view-users.component';
 import { ViewUsersDetailComponent } from './view-users-detail/view-users-detail.component';
 
@@ -30,6 +31,10 @@ const routes: Routes = [
   {
     path: 'new',
     component: ViewRegisterComponent
+  },
+  {
+    path: 'updates',
+    component: ViewUpdatesComponent
   },
   {
     path: 'users',
