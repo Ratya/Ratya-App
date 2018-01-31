@@ -15,6 +15,7 @@ import { ViewHomeComponent } from './view-home/view-home.component';
 import { ViewProjectsComponent } from './view-projects/view-projects.component';
 import { ViewProjectsDetailComponent } from './view-projects-detail/view-projects-detail.component';
 import { ViewUsersComponent } from './view-users/view-users.component';
+import { ViewUsersDetailComponent } from './view-users-detail/view-users-detail.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ViewUsersComponent } from './view-users/view-users.component';
     ViewHomeComponent,
     ViewProjectsComponent,
     ViewProjectsDetailComponent,
-    ViewUsersComponent
+    ViewUsersComponent,
+    ViewUsersDetailComponent
   ],
   imports: [
     AppRoutingModule,
