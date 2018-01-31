@@ -22,14 +22,14 @@ export class AppComponent {
       icon: 'anticon-home',
       routerLink: '/'
     }, {
-      icon: 'anticon-team',
-      routerLink: '/users'
-    }, {
       icon: 'anticon-folder-open',
       routerLink: '/projects'
     }, {
       icon: 'anticon-check',
       routerLink: '/releases'
+    }, {
+      icon: 'anticon-team',
+      routerLink: '/users'
     }];
 
   constructor() {
