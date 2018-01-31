@@ -14,13 +14,15 @@ import { AppComponent } from './app.component';
 import { ViewHomeComponent } from './view-home/view-home.component';
 import { ViewProjectsComponent } from './view-projects/view-projects.component';
 import { ViewProjectsDetailComponent } from './view-projects-detail/view-projects-detail.component';
+import { ViewUsersComponent } from './view-users/view-users.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ViewHomeComponent,
     ViewProjectsComponent,
-    ViewProjectsDetailComponent
+    ViewProjectsDetailComponent,
+    ViewUsersComponent
   ],
   imports: [
     AppRoutingModule,
