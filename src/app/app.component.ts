@@ -6,5 +6,33 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+
+  public nzTheme = 'dark';
+
+  public nzMode = 'vertical';
+
+  public isCollapsed = true;
+
+  public routerLinkActiveOptions = {
+    exact: true
+  };
+
+  public routes = [
+    {
+      icon: 'anticon-home',
+      routerLink: '/'
+    }, {
+      icon: 'anticon-team',
+      routerLink: '/users'
+    }, {
+      icon: 'anticon-folder-open',
+      routerLink: '/projects'
+    }, {
+      icon: 'anticon-check',
+      routerLink: '/releases'
+    }];
+
+  constructor() {
+  }
+
 }
