@@ -6,7 +6,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ServiceWorkerModule } from '@angular/service-worker';
 
-import { NgZorroAntdModule } from 'ng-zorro-antd';
+import { enUS, NgZorroAntdModule, NZ_LOCALE } from 'ng-zorro-antd';
 
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
@@ -47,7 +47,9 @@ import { ViewUpdatesComponent } from './view-updates/view-updates.component';
       enabled: environment.production
     })
   ],
-  providers: [],
+  providers: [
+    {provide: NZ_LOCALE, useValue: enUS}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

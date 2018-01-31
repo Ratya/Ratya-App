@@ -1,3 +1,57 @@
-<p>
-  view-projects works!
-</p>
+<div class="search">
+  <nz-input
+    nzType="search"
+    nzPlaceHolder="プロジェクト名"
+    [(ngModel)]="searchText"
+    (nzOnSearch)="onSearch($event)">
+  </nz-input>
+</div>
+
+<div class="pager">
+  <nz-pagination
+    [nzPageIndex]="2"
+    [nzTotal]="500"
+    nzShowQuickJumper>
+  </nz-pagination>
+</div>
+
+<nz-card *ngFor="let doc of data">
+  <nz-timeline>
+    <ng-template #title>
+      {{doc.title}}
+    </ng-template>
+    <ng-template #extra>
+      <button nz-button nzType="dashed" nzShape="circle">
+        <i class="anticon anticon-heart-o"></i>
+      </button>
+      <button nz-button nzType="dashed" nzShape="circle">
+        <i class="anticon anticon-check"></i>
+      </button>
+    </ng-template>
+    <ng-template #body class="no-padding">
+      <nz-carousel nzEffect="fade">
+        <div
+          *ngFor="let index of imageURLs"
+          nz-carousel-content>
+          <h3>{{index}}</h3>
+        </div>
+      </nz-carousel>
+      <div class="body">
+        <p>
+          {{doc.content}}
+        </p>
+        <div class="timeline">
+          <nz-timeline>
+            <nz-timeline-item nzColor="green">正式版をリリースしました 2018-04-01</nz-timeline-item>
+            <nz-timeline-item nzColor="green">ベータ版をリリースしました 2018-03-01</nz-timeline-item>
+            <nz-timeline-item nzColor="red">リポジトリを公開しました 2018-02-01</nz-timeline-item>
+            <nz-timeline-item>私たちは開発者を募集しています 2018-01-01</nz-timeline-item>
+          </nz-timeline>
+        </div>
+        <p class="updatedAt">
+          {{doc.updatedAt}} 更新
+        </p>
+      </div>
+    </ng-template>
+  </nz-timeline>
+</nz-card>
