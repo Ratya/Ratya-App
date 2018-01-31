@@ -12,11 +12,13 @@ import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ViewHomeComponent } from './view-home/view-home.component';
+import { ViewProjectsComponent } from './view-projects/view-projects.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ViewHomeComponent
+    ViewHomeComponent,
+    ViewProjectsComponent
   ],
   imports: [
     AppRoutingModule,
