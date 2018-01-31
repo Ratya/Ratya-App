@@ -3,6 +3,7 @@
 <div class="title">
   <img [src]="logoSrc">
   <h1>Ratya</h1>
+  <p>New platform for OSS.</p>
 </div>
 
 <!-- form -->
@@ -72,11 +73,27 @@
         ログイン
       </button>
       <span>または</span>
-      <a href="">新しいアカウントを作る</a>
+      <a routerLink="/new">新しいアカウントを作る</a>
     </div>
   </div>
 </form>
 
-<div class="content">
-  hello
+<!-- updates -->
+
+<div class="update">
+  <nz-card>
+    <nz-timeline>
+      <ng-template #title>
+        アップデート
+      </ng-template>
+      <ng-template #extra>
+        <a>もっとみる</a>
+      </ng-template>
+      <ng-template #body>
+        <nz-timeline-item *ngFor="let update of updates">
+          {{update.content}} {{update.date}}
+        </nz-timeline-item>
+      </ng-template>
+    </nz-timeline>
+  </nz-card>
 </div>
