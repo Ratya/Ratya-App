@@ -1,3 +1,19 @@
-<p>
-  view-updates works!
-</p>
+<div class="title">
+  <h1>アップデート</h1>
+</div>
+
+<nz-card *ngFor="let update of updates">
+  <nz-timeline>
+    <ng-template #title>
+      {{update.title}}
+    </ng-template>
+    <ng-template #extra>
+      <span>{{update.date}}</span>
+    </ng-template>
+    <ng-template #body>
+      <p>
+        {{update.content}}
+      </p>
+    </ng-template>
+  </nz-timeline>
+</nz-card>
