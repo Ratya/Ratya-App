@@ -1,3 +1,82 @@
-<p>
-  view-home works!
-</p>
+<!-- title -->
+
+<div class="title">
+  <img [src]="logoSrc">
+  <h1>Ratya</h1>
+</div>
+
+<!-- form -->
+
+<form nz-form [formGroup]="formGroup" class="login-form" (ngSubmit)="submitForm()">
+  <div nz-form-item>
+    <div nz-form-control>
+      <nz-input
+        formControlName="email"
+        nzPlaceHolder="メールアドレス"
+        nzSize="large">
+        <ng-template #prefix>
+          <i class="anticon anticon-user"></i>
+        </ng-template>
+      </nz-input>
+      <div
+        nz-form-explain
+        *ngIf="email.dirty && email.hasError('required')">
+        メールアドレスを入力してください
+      </div>
+      <div
+        nz-form-explain
+        *ngIf="email.dirty && email.hasError('maxLength')">
+        メールアドレスが長過ぎます
+      </div>
+      <div
+        nz-form-explain
+        *ngIf="email.dirty && email.hasError('email')">
+        メールアドレスが正しくありません
+      </div>
+    </div>
+  </div>
+  <div nz-form-item>
+    <div nz-form-control>
+      <nz-input
+        formControlName="password"
+        nzType="password"
+        nzPlaceHolder="パスワード"
+        nzSize="large">
+        <ng-template #prefix>
+          <i class="anticon anticon-lock"></i>
+        </ng-template>
+      </nz-input>
+      <div
+        nz-form-explain
+        *ngIf="password.dirty && password.hasError('required')">
+        パスワードを入力してください
+      </div>
+      <div
+        nz-form-explain
+        *ngIf="password.dirty && password.hasError('maxLength')">
+        パスワードが長過ぎます
+      </div>
+    </div>
+  </div>
+  <div nz-form-item>
+    <div nz-form-control>
+      <label nz-checkbox formControlName="remember">
+        <span>記憶する</span>
+      </label>
+      <a class="login-form-forgot">パスワードを忘れた</a>
+      <button
+        nz-button
+        class="login-form-button"
+        nzType="primary"
+        nzSize="large">
+        ログイン
+      </button>
+      <span>または</span>
+      <a href="">新しいアカウントを作る</a>
+    </div>
+  </div>
+</form>
+
+<div class="content">
+  hello
+</div>

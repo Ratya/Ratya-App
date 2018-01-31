@@ -3,7 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ServiceWorkerModule } from '@angular/service-worker';
 
 import { NgZorroAntdModule } from 'ng-zorro-antd';
@@ -25,10 +25,10 @@ import { ViewReleasesDetailComponent } from './view-releases-detail/view-release
     ViewHomeComponent,
     ViewProjectsComponent,
     ViewProjectsDetailComponent,
-    ViewUsersComponent,
-    ViewUsersDetailComponent,
     ViewReleasesComponent,
-    ViewReleasesDetailComponent
+    ViewReleasesDetailComponent,
+    ViewUsersComponent,
+    ViewUsersDetailComponent
   ],
   imports: [
     AppRoutingModule,
@@ -38,6 +38,7 @@ import { ViewReleasesDetailComponent } from './view-releases-detail/view-release
     FormsModule,
     HttpClientModule,
     NgZorroAntdModule.forRoot(),
+    ReactiveFormsModule,
     ServiceWorkerModule.register('/ngsw-worker.js', {
       enabled: environment.production
     })

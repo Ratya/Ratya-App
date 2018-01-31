@@ -42,3 +42,11 @@
   display: block;
   width: 100%;
 }
+
+.content {
+  padding: 16px 0;
+}
+
+.copyright {
+  text-align: center;
+}

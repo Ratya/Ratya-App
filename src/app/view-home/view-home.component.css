@@ -1,0 +1,35 @@
+.content {
+  padding: 24px;
+  background: #fff;
+  min-height: 360px;
+}
+
+
+.title {
+}
+
+.title img {
+  display: block;
+  margin: 0 auto;
+  max-width: 200px;
+}
+
+.title h1 {
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: 2px;
+}
+
+.login-form {
+  padding-top: 40px;
+  margin: 0 auto;
+  max-width: 280px;
+}
+
+.login-form-forgot {
+  float: right;
+}
+
+.login-form-button {
+  width: 100%;
+}

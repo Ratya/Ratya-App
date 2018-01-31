@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  public logo = '/assets/logo-white.png';
+  public logoSrc = '/assets/logo-white.png';
 
   public nzTheme = 'dark';
 

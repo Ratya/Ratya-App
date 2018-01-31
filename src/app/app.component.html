@@ -2,7 +2,7 @@
 
   <nz-sider nzCollapsible [nzCollapsed]="isCollapsed" [nzTrigger]="null">
     <div class="logo">
-      <img [src]="logo">
+      <img [src]="logoSrc">
     </div>
     <ul nz-menu [nzTheme]="nzTheme" [nzMode]="nzMode">
       <li *ngFor="let route of routes"
@@ -16,10 +16,10 @@
   </nz-sider>
 
   <nz-layout>
-    <nz-content style="margin:0 16px;">
+    <nz-content class="content">
       <router-outlet></router-outlet>
     </nz-content>
-    <nz-footer style="text-align: center;">© 2018 Ratya</nz-footer>
+    <nz-footer class="copyright">© 2018 Ratya</nz-footer>
   </nz-layout>
 
 </nz-layout>
