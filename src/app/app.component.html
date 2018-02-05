@@ -1,6 +1,10 @@
 <nz-layout>
 
-  <nz-sider nzCollapsible [nzCollapsed]="isCollapsed" [nzTrigger]="null">
+  <nz-sider nzCollapsible
+            [nzCollapsed]="isCollapsed"
+            [nzCollapsedWidth]="0"
+            [nzWidth]="nzWidth"
+            [nzBreakpoint]="nzBreakpoint">
     <div class="logo">
       <img [src]="logoSrc">
     </div>

@@ -2,24 +2,33 @@
   min-height: 100%;
 }
 
-:host ::ng-deep .ant-layout-content {
-  margin: 0 16px
+:host >>> .ant-layout,
+:host >>> .ant-layout-footer {
+  background-color: white;
 }
 
-:host ::ng-deep .ant-layout-sider-collapsed .nav-text {
+:host >>> .ant-layout-content {
+  margin: 0 16px;
+}
+
+:host >>> .ant-layout-sider {
+  overflow: hidden;
+}
+
+:host >>> .ant-layout-sider-collapsed .nav-text {
   display: none;
 }
 
-:host ::ng-deep .ant-layout-sider-collapsed .ant-menu-submenu-title:after {
+:host >>> .ant-layout-sider-collapsed .ant-menu-submenu-title:after {
   display: none;
 }
 
-:host ::ng-deep .ant-layout-sider-collapsed .anticon {
+:host >>> .ant-layout-sider .anticon {
   font-size: 16px;
   margin-left: 8px;
 }
 
-:host ::ng-deep .trigger {
+:host >>> .trigger {
   font-size: 18px;
   line-height: 64px;
   padding: 0 16px;
@@ -27,7 +36,7 @@
   transition: color .3s;
 }
 
-:host ::ng-deep .trigger:hover {
+:host >>> .trigger:hover {
   color: #108ee9;
 }
 
@@ -40,7 +49,7 @@
 
 .logo img {
   display: block;
-  width: 100%;
+  width: 36px;
 }
 
 .content {

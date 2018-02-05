@@ -3,3 +3,7 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   outline: none;
 }
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px white inset;
+}

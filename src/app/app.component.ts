@@ -15,6 +15,10 @@ export class AppComponent {
 
   public isCollapsed = true;
 
+  public nzBreakpoint = 'sm';
+
+  public nzWidth = 64;
+
   public routerLinkActiveOptions = {
     exact: true
   };
@@ -24,7 +28,7 @@ export class AppComponent {
       icon: 'anticon-home',
       routerLink: '/'
     }, {
-      icon: 'anticon-folder-open',
+      icon: 'anticon-rocket',
       routerLink: '/projects'
     }, {
       icon: 'anticon-check',

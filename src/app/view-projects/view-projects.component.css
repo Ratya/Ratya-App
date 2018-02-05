@@ -1,3 +1,9 @@
+:host {
+  display: block;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
 .title {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -8,7 +14,7 @@
 }
 
 .ant-card {
-  margin-top: 10px;
+  margin-top: 50px;
 }
 
 .search {
@@ -23,19 +29,6 @@
   text-align: right;
 }
 
-:host ::ng-deep .ant-carousel .slick-slide {
-  text-align: center;
-  height: 160px;
-  line-height: 160px;
-  background: #364d79;
-  color: #fff;
-  overflow: hidden;
-}
-
-:host ::ng-deep .ant-card-body {
-  padding: 0;
-}
-
 .images h3 {
   color: #fff;
 }
@@ -46,4 +39,17 @@
 
 .timeline {
   padding-top: 25px;
+}
+
+:host >>> .ant-carousel .slick-slide {
+  text-align: center;
+  height: 160px;
+  line-height: 160px;
+  background: #364d79;
+  color: #fff;
+  overflow: hidden;
+}
+
+:host >>> .ant-card-body {
+  padding: 0;
 }
