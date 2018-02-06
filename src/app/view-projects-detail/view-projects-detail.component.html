@@ -1,3 +1,99 @@
-<p>
-  view-projects-detail works!
-</p>
+<div class="column">
+
+  <!-- header -->
+
+  <div>
+    <button nz-button
+            nzShape="circle"
+            nzSize="large"
+            (click)="onBack()">
+      <i class="anticon anticon-left"></i>
+    </button>
+  </div>
+
+  <!-- title -->
+
+  <div class="title">
+    <h1>Ratya Project</h1>
+    <h3>by <a>Ratya project team</a></h3>
+  </div>
+
+  <!-- carousel -->
+
+  <div class="carousel">
+    <nz-carousel nzVertical>
+      <div nz-carousel-content *ngFor="let index of numbers">
+        <h2>{{index}}</h2>
+      </div>
+    </nz-carousel>
+  </div>
+
+  <!-- tags -->
+
+  <div class="tags">
+    <nz-tag>Go</nz-tag>
+    <nz-tag>Java</nz-tag>
+    <nz-tag>App Engine</nz-tag>
+  </div>
+
+  <!-- timeline -->
+
+  <div class="timeline">
+    <nz-timeline>
+      <nz-timeline-item nzColor="green">正式版をリリースしました 2018-04-01</nz-timeline-item>
+      <nz-timeline-item nzColor="green">ベータ版をリリースしました 2018-03-01</nz-timeline-item>
+      <nz-timeline-item nzColor="red">リポジトリを公開しました 2018-02-01</nz-timeline-item>
+      <nz-timeline-item>私たちは開発者を募集しています 2018-01-01</nz-timeline-item>
+    </nz-timeline>
+  </div>
+
+  <div class="coin">
+    <nz-input-number [(ngModel)]="coin"
+                     [nzMin]="0.5"
+                     [nzMax]="10"
+                     [nzStep]="0.1"
+                     [nzFormatter]="formatterPercent"
+                     [nzParser]="parserPercent">
+    </nz-input-number>
+
+    <button nz-button nzType="primary">
+      <span>送信する</span>
+    </button>
+  </div>
+
+  <div class="users">
+    <p>28人のユーザがこのプロジェクトを応援しています</p>
+    <div class="icons">
+      <nz-avatar nzSize="large" nzIcon="user"></nz-avatar>
+      <nz-avatar nzSize="large" nzIcon="user"></nz-avatar>
+      <nz-avatar nzSize="large" nzIcon="user"></nz-avatar>
+      <nz-avatar nzSize="large" nzIcon="user"></nz-avatar>
+    </div>
+  </div>
+
+  <div class="tabs">
+
+    <nz-tabset>
+
+      <nz-tab>
+        <ng-template #nzTabHeading>
+          プロジェクト
+        </ng-template>
+        <p>このプロジェクトはオープンソースの開発を支援します。</p>
+      </nz-tab>
+
+      <nz-tab>
+        <ng-template #nzTabHeading>
+          ユーザ
+        </ng-template>
+        <nz-avatar nzSize="large" nzIcon="user"></nz-avatar>
+        <nz-avatar nzSize="large" nzIcon="user"></nz-avatar>
+        <nz-avatar nzSize="large" nzIcon="user"></nz-avatar>
+        <nz-avatar nzSize="large" nzIcon="user"></nz-avatar>
+      </nz-tab>
+
+    </nz-tabset>
+
+  </div>
+
+</div>

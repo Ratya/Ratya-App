@@ -1,0 +1,63 @@
+:host {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.column {
+  max-width: 800px;
+  padding: 0 8px;
+}
+
+.title {
+  padding-top: 40px;
+}
+
+.title h1 {
+  text-align: center;
+}
+
+.title h3 {
+  text-align: right;
+}
+
+.carousel {
+  margin: 0 auto;
+  padding-top: 20px;
+  max-width: 600px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.carousel >>> .ant-carousel .slick-slide {
+  text-align: center;
+  height: 200px;
+  line-height: 200px;
+  background: lightgray;
+  color: #fff;
+  overflow: hidden;
+}
+
+.carousel >>> .ant-carousel h3 {
+  color: #fff;
+}
+
+.tags {
+  padding-top: 20px;
+}
+
+.timeline {
+  padding-top: 40px;
+}
+
+.users {
+  padding-top: 20px;
+}
+
+.users .icons {
+  padding-top: 10px;
+}
+
+.tabs {
+  padding-top: 40px;
+}

@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewProjectsDetailComponent implements OnInit {
 
-  constructor() { }
+  public numbers = [1, 2, 3];
 
-  ngOnInit() {
+  public coin = 0;
+
+  constructor(private location: Location) {
   }
 
+  public formatterPercent(value) {
+    return `${value} XRP`;
+  }
+
+  public parserPercent(value) {
+    return value.replace('XRP', '');
+  }
+
+  public onBack() {
+    this.location.back();
+  }
+
+  public ngOnInit() {
+  }
 }

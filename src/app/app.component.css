@@ -7,10 +7,6 @@
   background-color: white;
 }
 
-:host >>> .ant-layout-content {
-  margin: 0 16px;
-}
-
 :host >>> .ant-layout-sider {
   overflow: hidden;
 }

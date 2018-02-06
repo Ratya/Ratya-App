@@ -18,7 +18,9 @@
 <nz-card *ngFor="let doc of data">
   <nz-timeline>
     <ng-template #title>
-      {{doc.title}}
+      <a routerLink="/projects/foo">
+        {{doc.title}}
+      </a>
     </ng-template>
     <ng-template #extra>
       <button nz-button nzType="dashed" nzShape="circle">
@@ -29,7 +31,7 @@
       </button>
     </ng-template>
     <ng-template #body class="no-padding">
-      <nz-carousel nzEffect="fade">
+      <nz-carousel nzEffect="fade" nzVertical>
         <div
           *ngFor="let index of imageURLs"
           nz-carousel-content>

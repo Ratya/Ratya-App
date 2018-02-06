@@ -37,7 +37,7 @@ export class ViewProjectsComponent implements OnInit {
     }
   ];
 
-  searchText = '';
+  public searchText = '';
 
   public onSearch(event: string): void {
     console.log(event);
